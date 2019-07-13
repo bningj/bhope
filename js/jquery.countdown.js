@@ -31,7 +31,8 @@
 		(function tick(){
 			
 			// Time left
-			left = Math.floor((options.timestamp - (new Date())) / 1000);
+			var now = Date.parse("August 31, 2019");
+			left = Math.floor((now - (new Date()).getTime()) / 1000);
 			
 			if(left < 0){
 				left = 0;
@@ -110,7 +111,7 @@
 
 	}
 
-	// Creates an animated transition between the two numbers
+	// 数字变动特效处理
 	function switchDigit(position,number){
 		
 		var digit = position.find('.digit')
